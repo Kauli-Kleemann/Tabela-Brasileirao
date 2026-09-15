@@ -22,4 +22,13 @@ public class TabelaBrasileirao extends Tabela {
 
         return nomes[primeiro];
     }
+
+    public void adicionaVitoria(int posicao, int golsMarcados, int golsSofridos) {
+        tabela[posicao][0] += 3; // Mais 3 pontos
+        tabela[posicao][1] ++; // Mais uma partida realizada
+        tabela[posicao][2] ++; // Mais uma vitoria
+        tabela[posicao][5] += golsMarcados;
+        tabela[posicao][6] += golsSofridos;
+        tabela[posicao][7] += tabela[posicao][5] - tabela[posicao][6]; 
+    }
 }

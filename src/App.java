@@ -20,16 +20,18 @@ public class App {
     
     public static void main(String[] args) {
         
-        Tabela tabela = new TabelaBrasileirao();
+        TabelaBrasileirao tabela = new TabelaBrasileirao();
 
         tabela.adicionaClube("Novo Hamburgo");
         tabela.adicionaClube("15 de Novembro");
         tabela.adicionaClube("Internacional");
         tabela.adicionaClube("Grêmio");
+        tabela.adicionaVitoria(3, 5, 2);
 
         tabela.adicionaVitoria("Novo Hamburgo", 3, 2);
         tabela.adicionaVitoria("15 de Novembro", 2,0);
         tabela.imprimeTabela();
+
         System.out.println("Primeiro na tabela: " + tabela.primeiroLugar());
 
         System.out.println(tabela);
