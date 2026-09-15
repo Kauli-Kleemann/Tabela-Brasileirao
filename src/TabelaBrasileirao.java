@@ -1,6 +1,6 @@
 public class TabelaBrasileirao extends Tabela {
     
-    @Override 
+   // @Override 
     public String primeiroLugar() {
 
         int maiorPontuacao = tabela[0][0];
@@ -30,5 +30,15 @@ public class TabelaBrasileirao extends Tabela {
         tabela[posicao][5] += golsMarcados;
         tabela[posicao][6] += golsSofridos;
         tabela[posicao][7] += tabela[posicao][5] - tabela[posicao][6]; 
+    }
+
+    public String toString() {
+        String resultado = String.format("%15s %4s%4s%4s%4s%4s%4s%4s%4s\n","TIME","PTS","PJ","VIT","E","DER","GM","GC","SG");
+
+        for (int i = 0; i < 20; i++) {
+            String dados = String.format("%15s %4s%4s%4s%4s%4s%4s%4s%4s\n", nomes[i], tabela[i][0], tabela[i][1], tabela[i][2], tabela[i][3], tabela[i][4], tabela[i][5], tabela[i][6], tabela[i][7]);
+            resultado += dados;
+        }
+        return resultado;
     }
 }
