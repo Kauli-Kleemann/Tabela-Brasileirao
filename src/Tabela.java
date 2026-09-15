@@ -1,8 +1,8 @@
 public abstract class Tabela {
 
-    private String nomes[];
+    protected String nomes[];
 
-    private int tabela[][];
+    protected int tabela[][];
     /*
      * 0 - pontos PTS
      * 1 - partidas PJ
