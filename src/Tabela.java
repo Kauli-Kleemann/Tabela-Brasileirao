@@ -51,6 +51,33 @@ public abstract class Tabela {
         }
     }
 
+    public void adicionaEmpate(String nomeClube, int golsMarcados, int golsSofridos) {
+        for (int i = 0; i < 20; i++) {
+            if (nomes[i] == nomeClube) {
+                tabela[i][0] += 1;
+                tabela[i][1]++;
+                tabela[i][3]++;
+                tabela[i][5] += golsMarcados;
+                tabela[i][6] += golsSofridos;
+                tabela[i][7] += tabela[i][5] - tabela[i][6];
+                break;
+            }
+        }
+    }
+
+    public void adicionaDerrota(String nomeClube, int golsMarcados, int golsSofridos) {
+        for (int i = 0; i < 20; i++) {
+            if (nomes[i] == nomeClube) {
+                tabela[i][1]++;
+                tabela[i][4]++;
+                tabela[i][5] += golsMarcados;
+                tabela[i][6] += golsSofridos;
+                tabela[i][7] += tabela[i][5] - tabela[i][6];
+                break;
+            }
+        }
+    }
+
     public String primeiroLugar() {
 
         int maiorPontuacao = tabela[0][0]; 

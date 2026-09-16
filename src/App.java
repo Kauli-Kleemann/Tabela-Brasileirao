@@ -28,6 +28,10 @@ public class App {
         tabela.adicionaClube("Grêmio");
         tabela.adicionaVitoria(3, 5, 2);
 
+        tabela.adicionaDerrota("Internacional", 0, 3);
+        tabela.adicionaEmpate("15 de Novembro", 1, 1);
+        tabela.adicionaVitoria("Grêmio", 7, 2);
+
         tabela.adicionaVitoria("Novo Hamburgo", 3, 2);
         tabela.adicionaVitoria("15 de Novembro", 2,0);
         tabela.imprimeTabela();
